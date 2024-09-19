@@ -1,9 +1,11 @@
+import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react"
+import fetchMock from "fetch-mock";
 import LoginForm from ".";
 
 describe("Login Form",()=>{
     beforeEach(() => {
-        fetchMock.resetMocks()
+        fetchMock.reset()
       });
 
     test("email input field should be rendered",()=>{
